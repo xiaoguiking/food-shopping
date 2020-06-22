@@ -1,0 +1,21 @@
+<!--pages/api/api.wxml-->
+<text>pages/api/api.wxml</text>
+<button bindtap='scanCode'>二维码</button>
+<text>扫码信息{{qrcode}}</text>
+<button bindtap='getNet'>网络变化</button>
+<button bindtap='loading'>加载中</button>
+<button bindtap='show'>显示操作菜单</button>
+<button bindtap='call'>拨打电话</button>
+<button bindtap='music'>播放音乐</button>
+<button bindtap='luyin'>开始录音</button>
+<button bindtap='stop'>停止录音</button>
+<button bindtap='play'>播放录音</button>
+<button bindtap='getUserInfo'open-type="getUserInfo" >获取用户信息</button>
+<image src = "{{avator}}"></image>
+
+<map id="myMap" show-location  markers=' markers'  latitude = '40.22077'longitude='116.23128' />
+
+<button type="primary" bindtap="getCenterLocation">获取位置</button>
+<button type="primary" bindtap="moveToLocation">移动位置</button>
+<button type="primary" bindtap="translateMarker">移动标注</button>
+<button type="primary" bindtap="includePoints">缩放视野展示所有经纬度</button>

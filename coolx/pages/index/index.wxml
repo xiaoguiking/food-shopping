@@ -1,0 +1,32 @@
+<!-- 这是index.wxml页面 -->
+<import src = '../tpl/products/products.wxml'/>
+<view class='container home'>
+  <view class='banner'>
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true">
+      <block wx:for="{{banners}}" wx:key="unique">
+        <swiper-item>
+          <image src="{{item.imgPath}}" class="slide-image" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class='theme'>
+    <text>精选主题</text>
+    <view class='theme-container'>
+      <view wx:for='{{theme}}'
+       wx:key="un" class="{{item.size==1?'small':'big'}}"
+       bindtap='goTheme'
+        data-themeid =" {{item._id}}" data-themename = "{{item.name}}">
+        <image src='{{item.img}}'></image>
+      </view>
+    </view>
+  </view>
+
+  <view class="new">
+    <text class='new-title'>最近新品</text>
+    <!-- 引用模板 -->
+   <template is="products" data ='{{...{ newPro} }}'/>
+   
+  </view>
+
+</view>

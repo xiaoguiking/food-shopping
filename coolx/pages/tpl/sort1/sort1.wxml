@@ -1,0 +1,23 @@
+<template name="sortdetail">
+
+  <view class="category-detail-box">
+   {{baseUrl}}{{sortInfo.title}}
+    <!--分类图片 -->
+    <view class="category-header">
+      <image src="{{sortInfo. topImg}}" mode="aspectFill"></image>
+    </view>
+    <!-- 标题 -->
+    <view class="category-title">
+      <text>{{sortInfo.name}}</text>
+    </view>
+    <!-- 该类别的产品信息 -->
+    <view class="category-main">
+      <block wx:for="{{sortInfo.info}}" >
+        <view class="category-goods-items {{index%3==1?'middle':''}}" bindtap='goDetail' data-id='{{item._id}}'>
+          <image src="{{item.imgPath}}" mode="aspectFill"></image>
+          <view>{{item.name}}</view>
+        </view>
+      </block>
+    </view>
+  </view>
+</template>

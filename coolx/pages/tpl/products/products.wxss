@@ -1,0 +1,24 @@
+/* products.wxss */
+.pronew-container{
+  padding:10rpx;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.pronew-item{
+  margin-bottom:7rpx;
+   width: 360rpx;
+   height: 360rpx;
+   background: #ddd;
+   border-radius: 3rpx;
+   text-align: center;
+  
+}
+.pronew-item image{
+  width: 330rpx;
+  height: 300rpx;
+}
+pronew-container text{
+  display:inline;
+  text-align: center;
+}

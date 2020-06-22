@@ -1,0 +1,11 @@
+<!--pages/theme/theme.wxml-->
+<import src="../tpl/products/products.wxml"/> 
+<view class='theme'>
+<view  class='theme-top'>
+   <image src = "{{toping}}"></image>
+</view>
+  <!-- 引用模板 -->
+  <!-- 产品列表 -->
+  <template is= "products" data='{{...{ newPro} }}' />
+
+  </view>

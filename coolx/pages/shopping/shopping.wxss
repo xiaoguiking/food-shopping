@@ -1,0 +1,27 @@
+/* pages/shopping/shopping.wxss */
+.banner {
+width: 750rpx;
+height: 350rpx;
+/* background-color: rebeccapurple; */
+}
+.theme {
+  width: 750rpx;
+  height: 250rpx;
+  /* background-color: greenyellow; */
+  display: flex;
+  padding: 0 1px;
+  justify-content: space-between;
+}
+.theme .left {
+  width: 370rpx;
+  background-color: brown;
+}
+.theme .right {
+  width: 370rpx;
+  background-color: cadetblue;
+}
+.new {
+  width: 750rpx;
+  height: 250rpx;
+  background-color: blueviolet;
+}

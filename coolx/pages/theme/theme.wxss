@@ -1,0 +1,7 @@
+/* pages/theme/theme.wxss */
+@import '../tpl/products/products.wxss';
+.theme-top{
+    width: 750rpx;
+    height: 375rpx;
+   background: #fff000;
+}

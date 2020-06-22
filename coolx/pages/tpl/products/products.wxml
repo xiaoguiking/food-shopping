@@ -1,0 +1,11 @@
+<!-- 网页模板 -->
+<!-- 创建模板 -->
+<template name = "products">
+<view class='pronew-container'>
+  <view wx:for = "{{newPro}}" class='pronew-item' >
+  <image src = "{{item.img}}"></image>
+  <text>{{item.title}}</text><text>{{item.price}}/{{item.unit}}</text> 
+  <text></text> 
+  </view>
+</view>
+</template>

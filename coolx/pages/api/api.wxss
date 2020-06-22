@@ -1,0 +1,5 @@
+/* pages/api/api.wxss */
+#myMap{
+  width: 750rpx;
+  height: 375rpx;
+}

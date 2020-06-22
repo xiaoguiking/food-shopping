@@ -1,0 +1,17 @@
+<!--pages/sort/sort.wxml-->
+<import src='../tpl/sort1/sort1.wxml' />
+<view class='sort-container'>
+  <view class='left'>
+    <block wx:for="{{navs}}" class='sort-navs'>
+      <view class='sort-li' class='{{item == sel? "sel":""}}' bindtap='selType' data-type='{{item}}' data-index='{{index}}'>
+        {{item}} </view>
+    </block>
+  </view>
+  <view class='right'>
+    <view class='{{transform}} animate'>
+      <view wx:for='{{list}}'>
+        <template is='sortdetail' data = '{{sortInfo:item}}'></template>
+      </view>
+    </view>
+  </view>
+</view>
