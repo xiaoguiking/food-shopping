@@ -1,22 +1,28 @@
 <!--pages/shopping/shopping.wxml-->
 <view class="container home">
 	<view class="banner">
-		<swiper 
-    indicator-dots="{{indicatorDots}}" 
-    autoplay="{{autoplay}}" interval="{{interval}}" 
-    duration="{{duration}}" indicator-dots="true">
-			<block wx:for="{{imgUrls}}" wx:key="unique">
+		<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="true">
+			<block wx:for="{{banners}}" wx:key="unique">
 				<swiper-item>
-					<!-- <image src="{{item.imgPath}}" class="slide-image" /> -->
-          <view>{{item}}</view>
+					<image src="{{item.imgPath}}" class="slide-image" />
 				</swiper-item>
 			</block>
 		</swiper>
 	</view>
-	<view class="theme">
-		<view class="left">left</view>
-		<view class="right">right</view>
+	<view class="theme" 	wx:key="unique">
+		<text>侠骨柔情</text>
+		<view class="theme-container">
+			<view wx:for="{{theme}}" 
+			wx:key="unique"
+			class="{{item.size == 1 ? 'small': 'big'}}"
+			bindtap="goTheme"
+			data-themeid="{{item._id}}"
+			data-themename="{{item.name}}"
+			>
+				<image src="{{item.img}}" />
+			</view>
+		</view>
 	</view>
 	<view class="new">new</view>
-  <button bindtap="handleName">button</button>
+	<button bindtap="handleName">button</button>
 </view>

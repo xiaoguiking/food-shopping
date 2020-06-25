@@ -7,9 +7,9 @@ Page({
    products:[],
   //  topimg:'默认有图',
   onLoad(option){ 
-    console.log('主题加载',option)
+    console.log("主题加载",option)
     wx.setNavigationBarTitle({
-      title: option.themename
+      title: option.themeName
     })
   //  this.initData();
   },

@@ -1,24 +1,38 @@
 /* pages/shopping/shopping.wxss */
 .banner {
 width: 750rpx;
-height: 350rpx;
+height: 310rpx;
 /* background-color: rebeccapurple; */
 }
-.theme {
+
+.slide-image {
+  width: 100%;
+  height: 100%;
+}
+.theme text {
+  text-align: center;
+  font-size: 16px;
+}
+.theme-container {
   width: 750rpx;
-  height: 250rpx;
-  /* background-color: greenyellow; */
-  display: flex;
   padding: 0 1px;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
+
 }
-.theme .left {
+.theme-container .small {
   width: 370rpx;
-  background-color: brown;
+  height: 370rpx;
 }
-.theme .right {
-  width: 370rpx;
-  background-color: cadetblue;
+.theme-container .small image {
+  width: 100%;
+  height: 100%;
+}
+.theme-container .big image {
+  margin-top: 2px;
+ width: 750rpx;
+
 }
 .new {
   width: 750rpx;

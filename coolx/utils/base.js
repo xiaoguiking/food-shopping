@@ -14,7 +14,7 @@ class Base {
     return new Promise((resolve, reject) => {
       wx.request({
         method: method || 'GET',
-        url: this.baseUrl,
+        url: this.baseUrl + url,
         data: data || {},
         success(res) {
           if (res.statusCode === 200) {

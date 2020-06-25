@@ -46,7 +46,7 @@ Page({
     wx.showLoading({
       title: '加载中',
     })
-    index.axios('get', 'https://www.easy-mock.com/mock/5d0d90abef442814b038c8a9/example/buy')
+    index.axios('get', '/index/list')
       .then((res) => {
         console.log(res);
         let {

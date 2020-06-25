@@ -13,19 +13,19 @@ Page({
    */
   data: {
     name: "购物车",
-    imgUrls: [
-      '/images/banner-1a.png',
-      '/images/banner-2a.png',
-      '/images/banner-3a.png',
-      '/images/banner-4a.png',
-     ],
+    // imgUrls: [
+    //   '/images/banner-1a.png',
+    //   '/images/banner-2a.png',
+    //   '/images/banner-3a.png',
+    //   '/images/banner-4a.png',
+    //  ],
      indicatorDots: false,
      autoplay: true,
      interval: 3000,
      duration: 1000,
      banners: [],
-     producuts: [],
-     themes: [],
+     newPro: [],
+     theme: [],
   },
   handleName(e){
     // 事件对象
@@ -94,7 +94,8 @@ Page({
   wx.stopPullDownRefresh();
     shopping.axios(
       'GET', 
-      'mock/api',{}
+      '/car/list',
+      {}
     ).then(res => {
       console.log(res);
     })
@@ -118,21 +119,45 @@ Page({
 
   // 自定义方法
   initData(){
-    // shopping.axios(
-    //   'get', '/api/shopping'
-    // ).then(res => {
-      // let {    
-      //    banners,
-      //   producuts,
-      //   themes} = res.data;
-      //   this.setData({  banners,
-      //     producuts,
-      //     themes})
-    //   wx.hideLoading()
-    // })
+    shopping.axios(
+      'get', 
+      '/car/list'
+    ).then(res => {
+      let {    
+         banners,
+         newPro,
+        theme
+    } = res.data;
+    console.log(res.data, 'data');
+        this.setData({
+          banners,
+          newPro,
+          theme})
+      wx.hideLoading()
+    })
     setTimeout(() => {
       wx.hideLoading()
     }, 1000)
+  },
+
+
+  // 获取id方法封装
+  getDataId(e, key){
+    if(!key){
+      return e.currentTarget.dataset
+    } else {
+      return e.currentTarget.dataset.theme
+  }
+},
+  
+  // 主题theme
+  goTheme(e){
+  //  let id = this.getDataId(e, 'theme');
+  let {themeid, themename} = this.getDataId(e);
+   console.log(themeid,themename);
+   wx.navigateTo({
+     url: `/pages/theme/theme?themeId=${themeid}&&themeName=${themename}`,
+   })
   }
 
 })
