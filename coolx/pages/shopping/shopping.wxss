@@ -1,3 +1,5 @@
+@import '../tpl/products/products.wxss';
+/* 引入products模板css */
 /* pages/shopping/shopping.wxss */
 .banner {
 width: 750rpx;
@@ -34,8 +36,8 @@ height: 310rpx;
  width: 750rpx;
 
 }
-.new {
+/* .new {
   width: 750rpx;
   height: 250rpx;
   background-color: blueviolet;
-}
+} */

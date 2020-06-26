@@ -159,5 +159,4 @@ Page({
      url: `/pages/theme/theme?themeId=${themeid}&&themeName=${themename}`,
    })
   }
-
 })

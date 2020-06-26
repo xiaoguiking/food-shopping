@@ -2,10 +2,9 @@
 <import src="../tpl/products/products.wxml"/> 
 <view class='theme'>
 <view  class='theme-top'>
-   <image src = "{{toping}}"></image>
+   <image src="{{topimg}}"></image>
 </view>
   <!-- 引用模板 -->
   <!-- 产品列表 -->
-  <template is= "products" data='{{...{ newPro} }}' />
-
+  <template is= "products" data='{{...{newPro} }}' />
   </view>

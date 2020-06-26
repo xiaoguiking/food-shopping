@@ -1,3 +1,5 @@
+<!-- 使用公共模板 -->
+<import src="./../tpl/products/products.wxml" />
 <!--pages/shopping/shopping.wxml-->
 <view class="container home">
 	<view class="banner">
@@ -23,6 +25,9 @@
 			</view>
 		</view>
 	</view>
-	<view class="new">new</view>
+	<view class="new">
+	<!-- 使用名字为products的模板 -->
+	  <template is="products" data ="{{...{newPro} }}" /> 
+	</view>
 	<button bindtap="handleName">button</button>
 </view>

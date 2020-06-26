@@ -4,9 +4,9 @@
     "pages/sort/sort",
     "pages/index/index",
     "pages/api/api",
+    "pages/theme/theme",
+    "pages/my/my"
 
-    "pages/my/my",
-    "pages/theme/theme"
 
   ],
   "window": {

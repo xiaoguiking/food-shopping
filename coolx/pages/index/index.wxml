@@ -26,7 +26,5 @@
     <text class='new-title'>最近新品</text>
     <!-- 引用模板 -->
    <template is="products" data ='{{...{ newPro} }}'/>
-   
   </view>
-
 </view>
