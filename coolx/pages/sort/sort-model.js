@@ -1,4 +1,4 @@
-// sort ---- sor-model.js
+// sort ---- sort-model.js
 import Base from '../../utils/base.js'
 class Sort extends Base{
    constructor(){

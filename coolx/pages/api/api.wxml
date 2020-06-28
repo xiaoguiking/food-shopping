@@ -1,5 +1,5 @@
-<!--pages/api/api.wxml-->
-<text>pages/api/api.wxml</text>
+<!--pages/api/api.wxml api显示-->
+<text>pages/api/api.wxmlapi显示</text>
 <button bindtap='scanCode'>二维码</button>
 <text>扫码信息{{qrcode}}</text>
 <button bindtap='getNet'>网络变化</button>

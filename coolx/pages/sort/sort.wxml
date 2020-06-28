@@ -3,15 +3,24 @@
 <view class='sort-container'>
   <view class='left'>
     <block wx:for="{{navs}}" class='sort-navs'>
-      <view class='sort-li' class='{{item == sel? "sel":""}}' bindtap='selType' data-type='{{item}}' data-index='{{index}}'>
+      <view class='sort-li' class='{{item == sel? "sel":""}}' bindtap='selType' 
+      data-type='{{item}}' data-index='{{index}}'>
         {{item}} </view>
     </block>
   </view>
   <view class='right'>
-    <view class='{{transform}} animate'>
+    <!-- <view class='{{transform}} animate'>
       <view wx:for='{{list}}'>
         <template is='sortdetail' data = '{{sortInfo:item}}'></template>
       </view>
-    </view>
+    </view> -->
+     <view class="{{transform}}">
+      <view>text1</view>
+      <view>text2</view>
+      <view>text3</view>
+      <view>text4</view>
+      <view>text5</view>
+      <view>text6</view>
+     </view>
   </view>
 </view>

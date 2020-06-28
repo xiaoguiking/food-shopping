@@ -29,5 +29,5 @@
 	<!-- 使用名字为products的模板 -->
 	  <template is="products" data ="{{...{newPro} }}" /> 
 	</view>
-	<button bindtap="handleName">button</button>
+	<!-- <button bindtap="handleName">button</button> -->
 </view>

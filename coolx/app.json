@@ -1,12 +1,13 @@
 {
   "pages": [
-    "pages/shopping/shopping",
-    "pages/sort/sort",
-    "pages/index/index",
+    "pages/my/my",
     "pages/api/api",
-    "pages/theme/theme",
-    "pages/my/my"
 
+    "pages/sort/sort",
+    "pages/shopping/shopping",
+    "pages/index/index",
+    "pages/detail/detail",
+    "pages/theme/theme"
 
   ],
   "window": {

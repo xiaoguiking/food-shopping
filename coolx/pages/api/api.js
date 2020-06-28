@@ -28,8 +28,10 @@ Page({
    */
 
   // 允许从相机和相册扫码
-  // let that =this  第一种方法
+ 
+  // this 指向问题  或者写箭头函数
   scanCode() {
+     // let that =this  第一种方法
     wx.scanCode({
       success: (res) => {
         console.log(res)
@@ -39,6 +41,7 @@ Page({
       }
     })
   },
+
   // 网络变化
   getNet() {
     wx.onNetworkStatusChange((data) => {
@@ -123,7 +126,6 @@ Page({
    
   // 登录
   getUserInfo(){
-   
      wx.getUserInfo({
        success: (res)=> {
          var userInfo = res.userInfo
@@ -152,9 +154,5 @@ Page({
     })
   },
 // 
-
-
-
-
 
 })

@@ -1,1 +1,15 @@
 /* pages/my/my.wxss */
+
+.container .avator {
+   width: 750rpx;
+   height: 250rpx;
+   display: flex;
+   justify-content: 
+   flex-start;
+   align-items: center;
+}
+.container .avator image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 50%;
+}

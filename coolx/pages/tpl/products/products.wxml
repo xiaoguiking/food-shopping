@@ -2,7 +2,7 @@
 <!-- 创建模板 -->
 <template name = "products">
 <view class='pronew-container'>
-  <view wx:for = "{{newPro}}" class='pronew-item' >
+  <view wx:for = "{{newPro}}" class='pronew-item' bindtap="goDetail" data-id="1">
   <image src = "{{item.img}}"></image>
   <text>{{item.title}}</text>
   <text>{{item.price}}/{{item.unit}}</text> 

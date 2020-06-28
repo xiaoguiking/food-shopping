@@ -11,14 +11,23 @@ Page({
     wx.setNavigationBarTitle({
       title: option.themeName
     })
-   this.initData();
+   this.initData(option.themeId);
   },
-  initData(){
-    theme.axios('get',`/getThemeById/`,{themeId: "th2"})
+  // 初始化数据
+  initData(themeId){
+    theme.axios('get',`/getThemeById/`,{themeId})
     .then((res)=>{
      let {newPro, topimg} = res.data;
       console.log(res)
       this.setData({newPro,topimg})
+    })
+  },
+  // 跳转详情页
+  goDetail(e){
+    let id = theme.getDataset(e, 'id');
+    console.log(id, '12');
+    wx.navigateTo({
+      url: '/pages/detail/detail',
     })
   }
 })

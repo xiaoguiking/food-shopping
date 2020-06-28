@@ -1,2 +1,9 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view class="container">
+	<button bindtap='getUserInfo' open-type="getUserInfo">获取用户信息</button>
+	<view class="avator">
+		<image src="{{avatarUrl}}"></image>
+		<text>{{nickName}}</text>
+	</view>
+
+</view>

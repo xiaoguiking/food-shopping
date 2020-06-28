@@ -5,7 +5,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    avatarUrl:'',
+    nickName: ''
   },
 
   /**
@@ -62,5 +63,18 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  // 获取用户信息
+  getUserInfo() {
+    wx.getUserInfo({
+      success: (res) => {
+      console.log(res);
+      let {avatarUrl, nickName} = res.userInfo;
+      this.setData({
+        avatarUrl, nickName
+      })
+      }
+    })
   }
 })

@@ -1,9 +1,6 @@
 // pages/shopping/shopping.js
 // 引入modal层
-
-
 import Shopping from './shopping-model';
-
 const shopping = new Shopping();
 
 Page({
@@ -158,5 +155,13 @@ Page({
    wx.navigateTo({
      url: `/pages/theme/theme?themeId=${themeid}&&themeName=${themename}`,
    })
-  }
+  },
+    // 跳转详情页
+    goDetail(e){
+      let id = shopping.getDataset(e, 'id');
+      console.log(id, '12');
+      wx.navigateTo({
+        url: '/pages/detail/detail',
+      })
+    }
 })
